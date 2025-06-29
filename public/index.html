@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Matter Controller GUI</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background: #f9f9f9;
+    }
+    h1 {
+      color: #333;
+    }
+    #devices {
+      margin-top: 1rem;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    #devices th, #devices td {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    #devices th {
+      background-color: #eee;
+    }
+    button {
+      padding: 0.3rem 0.6rem;
+      cursor: pointer;
+    }
+    #pairForm {
+      margin-top: 2rem;
+      padding: 1rem;
+      background: #fff;
+      border: 1px solid #ccc;
+      max-width: 400px;
+    }
+    #pairForm input {
+      margin: 0.3rem 0;
+      padding: 0.4rem;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <h1>Matter Controller GUI</h1>
+
+  <table id="devices">
+    <thead>
+      <tr>
+        <th>Node ID</th>
+        <th>Vendor ID</th>
+        <th>Product ID</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <form id="pairForm">
+    <h2>Pair New Device</h2>
+    <label>
+      Discriminator (number):
+      <input type="number" id="discriminator" required />
+    </label>
+    <label>
+      Setup PIN (number):
+      <input type="number" id="setupPin" required />
+    </label>
+    <button type="submit">Pair Device</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
